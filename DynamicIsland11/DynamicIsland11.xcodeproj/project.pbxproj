@@ -1,0 +1,37 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = { };
+ objectVersion = 56;
+ objects = {
+  A10000012C00000100000001 = {isa = PBXBuildFile; fileRef = A10000022C00000100000001;};
+  A10000032C00000100000001 = {isa = PBXBuildFile; fileRef = A10000042C00000100000001;};
+  A10000052C00000100000001 = {isa = PBXBuildFile; fileRef = A10000062C00000100000001;};
+  A10000072C00000100000001 = {isa = PBXBuildFile; fileRef = A10000082C00000100000001;};
+  A10000092C00000100000001 = {isa = PBXBuildFile; fileRef = A100000A2C00000100000001;};
+  A100000B2C00000100000001 = {isa = PBXBuildFile; fileRef = A100000C2C00000100000001;};
+  A10000002C00000100000001 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicIsland11.app; sourceTree = BUILT_PRODUCTS_DIR;};
+  A10000022C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIsland11App.swift; sourceTree = "<group>";};
+  A10000042C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>";};
+  A10000062C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandView.swift; sourceTree = "<group>";};
+  A10000082C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandState.swift; sourceTree = "<group>";};
+  A100000A2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerModel.swift; sourceTree = "<group>";};
+  A100000C2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";};
+  A100000D2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
+  A100000E2C00000100000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+  A100000F2C00000100000001 = {isa = PBXGroup; children = (A10000102C00000100000001,A10000112C00000100000001); sourceTree = "<group>";};
+  A10000102C00000100000001 = {isa = PBXGroup; children = (A10000022C00000100000001,A10000042C00000100000001,A10000062C00000100000001,A10000082C00000100000001,A100000A2C00000100000001,A100000C2C00000100000001,A100000D2C00000100000001); path = DynamicIsland11; sourceTree = "<group>";};
+  A10000112C00000100000001 = {isa = PBXGroup; children = (A10000002C00000100000001); name = Products; sourceTree = "<group>";};
+  A10000122C00000100000001 = {isa = PBXNativeTarget; buildConfigurationList = A10000132C00000100000001; buildPhases = (A10000142C00000100000001,A100000E2C00000100000001,A10000152C00000100000001); buildRules = (); dependencies = (); name = DynamicIsland11; productName = DynamicIsland11; productReference = A10000002C00000100000001; productType = "com.apple.product-type.application";};
+  A10000142C00000100000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000012C00000100000001,A10000032C00000100000001,A10000052C00000100000001,A10000072C00000100000001,A10000092C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
+  A10000152C00000100000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A100000B2C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
+  A10000162C00000100000001 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; TargetAttributes = {A10000122C00000100000001 = {CreatedOnToolsVersion = 15.0;};};}; buildConfigurationList = A10000172C00000100000001; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base); mainGroup = A100000F2C00000100000001; productRefGroup = A10000112C00000100000001; projectDirPath = ""; projectRoot = ""; targets = (A10000122C00000100000001);};
+  A10000182C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; INFOPLIST_FILE = DynamicIsland11/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/Frameworks"); MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug;};
+  A10000192C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; INFOPLIST_FILE = DynamicIsland11/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/Frameworks"); MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O";}; name = Release;};
+  A100001A2C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIsland11/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; IPHONEOS_DEPLOYMENT_TARGET = 16.0;}; name = Debug;};
+  A100001B2C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIsland11/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; IPHONEOS_DEPLOYMENT_TARGET = 16.0;}; name = Release;};
+  A10000132C00000100000001 = {isa = XCConfigurationList; buildConfigurations = (A100001A2C00000100000001,A100001B2C00000100000001); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+  A10000172C00000100000001 = {isa = XCConfigurationList; buildConfigurations = (A10000182C00000100000001,A10000192C00000100000001); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+ };
+ rootObject = A10000162C00000100000001;
+}
