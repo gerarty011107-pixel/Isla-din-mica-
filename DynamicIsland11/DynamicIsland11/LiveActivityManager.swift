@@ -1,4 +1,5 @@
 import ActivityKit
+import Combine
 import Foundation
 
 @MainActor
@@ -21,10 +22,10 @@ final class LiveActivityManager: ObservableObject {
             title: title,
             subtitle: subtitle,
             symbol: symbol,
-            progress: progress
+            progress: max(0, min(1, progress))
         )
 
-        Task {
+        Task { @MainActor in
             do {
                 for existing in Activity<DynamicIslandActivityAttributes>.activities {
                     await existing.end(nil, dismissalPolicy: .immediate)
@@ -49,16 +50,14 @@ final class LiveActivityManager: ObservableObject {
 
     func update(kind: String, title: String, subtitle: String, symbol: String, progress: Double = 0) {
         guard let activity else { return }
-
         let state = DynamicIslandActivityAttributes.ContentState(
             kind: kind,
             title: title,
             subtitle: subtitle,
             symbol: symbol,
-            progress: progress
+            progress: max(0, min(1, progress))
         )
-
-        Task {
+        Task { @MainActor in
             let content = ActivityContent(
                 state: state,
                 staleDate: Date().addingTimeInterval(60 * 60)
@@ -69,8 +68,7 @@ final class LiveActivityManager: ObservableObject {
 
     func end() {
         guard let activity else { return }
-
-        Task {
+        Task { @MainActor in
             await activity.end(nil, dismissalPolicy: .after(Date().addingTimeInterval(2)))
             self.activity = nil
             self.isRunning = false
