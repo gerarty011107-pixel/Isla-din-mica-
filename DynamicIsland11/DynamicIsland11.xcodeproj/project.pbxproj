@@ -28,6 +28,7 @@
   B008 = {isa = PBXBuildFile; fileRef = F010;};
   B009 = {isa = PBXBuildFile; fileRef = F012;};
   B010 = {isa = PBXBuildFile; fileRef = F011; settings = {ATTRIBUTES = (RemoveHeadersOnCopy,);};};
+  B011 = {isa = PBXBuildFile; fileRef = F009;};
 
   G001 = {isa = PBXGroup; children = (F002,F003,F004,F005,F006,F007,F008,F009,F010); path = DynamicIsland11; sourceTree = "<group>";};
   G002 = {isa = PBXGroup; children = (F012,F013); path = DynamicIslandLiveActivity; sourceTree = "<group>";};
@@ -37,7 +38,7 @@
   P001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B001,B002,B003,B004,B005,B007,B008); runOnlyForDeploymentPostprocessing = 0;};
   P002 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (B006); runOnlyForDeploymentPostprocessing = 0;};
   P003 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-  P004 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B009); runOnlyForDeploymentPostprocessing = 0;};
+  P004 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B009,B011); runOnlyForDeploymentPostprocessing = 0;};
   P005 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
   P006 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
   P007 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (B010); name = "Embed Foundation Extensions"; runOnlyForDeploymentPostprocessing = 0;};
