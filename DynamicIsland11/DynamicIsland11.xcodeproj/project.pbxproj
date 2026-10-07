@@ -30,11 +30,12 @@
   A100000A2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerModel.swift; sourceTree = "<group>";};
   A100000C2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";};
   A100000D2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
+  A10000322C00000100000001 = {isa = PBXBuildFile; fileRef = A10000312C00000100000001;};
   A10000312C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>";};
 
   A100000E2C00000100000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
   A10000232C00000100000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-  A10000142C00000100000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000012C00000100000001,A10000032C00000100000001,A10000052C00000100000001,A10000072C00000100000001,A10000092C00000100000001,A100001C2C00000100000001,A100001A2C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
+  A10000142C00000100000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000012C00000100000001,A10000032C00000100000001,A10000052C00000100000001,A10000072C00000100000001,A10000092C00000100000001,A100001C2C00000100000001,A10000322C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
   A10000242C00000100000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000202C00000100000001,A10000212C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
   A10000152C00000100000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A100000B2C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
   A10000252C00000100000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
