@@ -1,4 +1,4 @@
-name: iOS Build Check - V3 Scarlet Safe
+name: iOS Build Check - V3 WidgetKit + Scarlet
 
 on:
   push:
@@ -19,54 +19,58 @@ jobs:
       - name: List project schemes
         run: xcodebuild -list -project DynamicIsland11/DynamicIsland11.xcodeproj
 
-      - name: Build for iPhoneOS (unsigned)
+      - name: Build unsigned app and WidgetKit extension
         run: |
           set -o pipefail
+          rm -rf build
           xcodebuild \
             -project DynamicIsland11/DynamicIsland11.xcodeproj \
             -scheme DynamicIsland11 \
             -sdk iphoneos \
             -configuration Release \
             -destination 'generic/platform=iOS' \
+            -derivedDataPath "$PWD/build" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
             build | tee xcodebuild.log
 
-      - name: Locate built app
+      - name: Verify app and Live Activity extension
         run: |
-          APP_PATH=$(find "$HOME/Library/Developer/Xcode/DerivedData" -type d -path '*/Build/Products/Release-iphoneos/DynamicIsland11.app' | head -n 1)
-          if [ -z "$APP_PATH" ]; then
-            echo 'DynamicIsland11.app was not produced.'
-            exit 1
-          fi
-          echo "APP_PATH=$APP_PATH" >> "$GITHUB_ENV"
+          APP_PATH="$PWD/build/Build/Products/Release-iphoneos/DynamicIsland11.app"
+          EXT_PATH="$APP_PATH/PlugIns/DynamicIslandLiveActivity.appex"
 
-      - name: Package unsigned IPA
+          test -d "$APP_PATH"
+          test -d "$EXT_PATH"
+          test -f "$APP_PATH/Info.plist"
+          test -f "$EXT_PATH/Info.plist"
+
+          echo "App:"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Info.plist"
+          echo "Extension:"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$EXT_PATH/Info.plist"
+
+      - name: Package unsigned IPA for Scarlet
         run: |
+          APP_PATH="$PWD/build/Build/Products/Release-iphoneos/DynamicIsland11.app"
           rm -rf Payload DynamicIsland11-v3-unsigned.ipa
           mkdir -p Payload
           cp -R "$APP_PATH" Payload/DynamicIsland11.app
           /usr/bin/zip -qry DynamicIsland11-v3-unsigned.ipa Payload
+          unzip -l DynamicIsland11-v3-unsigned.ipa | grep -E 'DynamicIsland11.app/PlugIns/DynamicIslandLiveActivity.appex|DynamicIsland11.app/Info.plist'
           test -s DynamicIsland11-v3-unsigned.ipa
 
-      - name: Upload unsigned IPA
+      - name: Upload V3 unsigned IPA
         uses: actions/upload-artifact@v6
         with:
           name: DynamicIsland11-v3-unsigned-ipa
-          path: DynamicIsland11-unsigned.ipa
+          path: DynamicIsland11-v3-unsigned.ipa
           if-no-files-found: error
 
       - name: Upload build log
         if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: DynamicIsland11-xcode-build-log
+          name: DynamicIsland11-v3-xcode-build-log
           path: xcodebuild.log
           if-no-files-found: ignore
-
-      - name: Verify no app extension is embedded
-        run: |
-          if find "$APP_PATH/PlugIns" -maxdepth 1 -type d -name '*.appex' | grep -q .; then
-            echo 'Unexpected app extension found in Scarlet-safe build.'
-            exit 1
-          fi
