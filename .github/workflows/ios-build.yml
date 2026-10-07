@@ -1,4 +1,4 @@
-name: iOS Build Check
+name: iOS Build Check - V3 Scarlet Safe
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
 
       - name: Package unsigned IPA
         run: |
-          rm -rf Payload DynamicIsland11-unsigned.ipa
+          rm -rf Payload DynamicIsland11-v3-unsigned.ipa
           mkdir -p Payload
           cp -R "$APP_PATH" Payload/DynamicIsland11.app
           /usr/bin/zip -qry DynamicIsland11-unsigned.ipa Payload
@@ -52,7 +52,7 @@ jobs:
       - name: Upload unsigned IPA
         uses: actions/upload-artifact@v6
         with:
-          name: DynamicIsland11-unsigned-ipa
+          name: DynamicIsland11-v3-unsigned-ipa
           path: DynamicIsland11-unsigned.ipa
           if-no-files-found: error
 
@@ -63,3 +63,10 @@ jobs:
           name: DynamicIsland11-xcode-build-log
           path: xcodebuild.log
           if-no-files-found: ignore
+
+      - name: Verify no app extension is embedded
+        run: |
+          if find "$APP_PATH/PlugIns" -maxdepth 1 -type d -name '*.appex' | grep -q .; then
+            echo 'Unexpected app extension found in Scarlet-safe build.'
+            exit 1
+          fi
