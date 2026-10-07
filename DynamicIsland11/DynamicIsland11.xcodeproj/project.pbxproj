@@ -4,70 +4,61 @@
  classes = {};
  objectVersion = 56;
  objects = {
-  A10000012C00000100000001 = {isa = PBXBuildFile; fileRef = A10000022C00000100000001;};
-  A10000032C00000100000001 = {isa = PBXBuildFile; fileRef = A10000042C00000100000001;};
-  A10000052C00000100000001 = {isa = PBXBuildFile; fileRef = A10000062C00000100000001;};
-  A10000072C00000100000001 = {isa = PBXBuildFile; fileRef = A10000082C00000100000001;};
-  A10000092C00000100000001 = {isa = PBXBuildFile; fileRef = A100000A2C00000100000001;};
-  A100000B2C00000100000001 = {isa = PBXBuildFile; fileRef = A100000C2C00000100000001;};
-  A100000D2C00000100000001 = {isa = PBXBuildFile; fileRef = A100000E2C00000100000001;};
-  A100000F2C00000100000001 = {isa = PBXBuildFile; fileRef = A10000102C00000100000001; settings = {ATTRIBUTES = (RemoveHeadersOnCopy,);};};
-  A10000112C00000100000001 = {isa = PBXBuildFile; fileRef = A10000122C00000100000001;};
-  A10000132C00000100000001 = {isa = PBXBuildFile; fileRef = A10000142C00000100000001;};
-  A10000152C00000100000001 = {isa = PBXBuildFile; fileRef = A10000162C00000100000001;};
+  F001 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicIsland11.app; sourceTree = BUILT_PRODUCTS_DIR;};
+  F002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIsland11App.swift; sourceTree = "<group>";};
+  F003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>";};
+  F004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandView.swift; sourceTree = "<group>";};
+  F005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandState.swift; sourceTree = "<group>";};
+  F006 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerModel.swift; sourceTree = "<group>";};
+  F007 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";};
+  F008 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
+  F009 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandActivityAttributes.swift; sourceTree = "<group>";};
+  F010 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>";};
+  F011 = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = DynamicIslandLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR;};
+  F012 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandLiveActivity.swift; sourceTree = "<group>";};
+  F013 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
 
-  A10000002C00000100000001 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicIsland11.app; sourceTree = BUILT_PRODUCTS_DIR;};
-  A10000022C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIsland11App.swift; sourceTree = "<group>";};
-  A10000042C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>";};
-  A10000062C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandView.swift; sourceTree = "<group>";};
-  A10000082C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandState.swift; sourceTree = "<group>";};
-  A100000A2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerModel.swift; sourceTree = "<group>";};
-  A100000C2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";};
-  A100000E2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
-  A10000102C00000100000001 = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = DynamicIslandLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR;};
-  A10000122C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandActivityAttributes.swift; sourceTree = "<group>";};
-  A10000142C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>";};
-  A10000162C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandLiveActivity.swift; sourceTree = "<group>";};
-  A10000172C00000100000001 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
+  B001 = {isa = PBXBuildFile; fileRef = F002;};
+  B002 = {isa = PBXBuildFile; fileRef = F003;};
+  B003 = {isa = PBXBuildFile; fileRef = F004;};
+  B004 = {isa = PBXBuildFile; fileRef = F005;};
+  B005 = {isa = PBXBuildFile; fileRef = F006;};
+  B006 = {isa = PBXBuildFile; fileRef = F007;};
+  B007 = {isa = PBXBuildFile; fileRef = F009;};
+  B008 = {isa = PBXBuildFile; fileRef = F010;};
+  B009 = {isa = PBXBuildFile; fileRef = F012;};
+  B010 = {isa = PBXBuildFile; fileRef = F011; settings = {ATTRIBUTES = (RemoveHeadersOnCopy,);};};
 
-  A10000182C00000100000001 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>";};
+  G001 = {isa = PBXGroup; children = (F002,F003,F004,F005,F006,F007,F008,F009,F010); path = DynamicIsland11; sourceTree = "<group>";};
+  G002 = {isa = PBXGroup; children = (F012,F013); path = DynamicIslandLiveActivity; sourceTree = "<group>";};
+  G003 = {isa = PBXGroup; children = (F001,F011); name = Products; sourceTree = "<group>";};
+  G004 = {isa = PBXGroup; children = (G001,G002,G003); sourceTree = "<group>";};
 
-  A10000202C00000100000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-  A10000212C00000100000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A100000B2C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
-  A10000222C00000100000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000012C00000100000001,A10000032C00000100000001,A10000052C00000100000001,A10000072C00000100000001,A10000092C00000100000001,A100000D2C00000100000001,A10000132C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
-  A10000232C00000100000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-  A10000242C00000100000001 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
-  A10000252C00000100000001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000112C00000100000001); runOnlyForDeploymentPostprocessing = 0;};
-  A10000262C00000100000001 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (A100000F2C00000100000001); name = "Embed Foundation Extensions"; runOnlyForDeploymentPostprocessing = 0;};
+  P001 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B001,B002,B003,B004,B005,B007,B008); runOnlyForDeploymentPostprocessing = 0;};
+  P002 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (B006); runOnlyForDeploymentPostprocessing = 0;};
+  P003 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+  P004 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B009); runOnlyForDeploymentPostprocessing = 0;};
+  P005 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+  P006 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+  P007 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (B010); name = "Embed Foundation Extensions"; runOnlyForDeploymentPostprocessing = 0;};
 
-  A10000272C00000100000001 = {isa = PBXGroup; children = (A10000282C00000100000001,A10000292C00000100000001); name = DynamicIslandLiveActivity; path = DynamicIslandLiveActivity; sourceTree = "<group>";};
-  A10000282C00000100000001 = {isa = PBXGroup; children = (A10000162C00000100000001,A10000172C00000100000001); name = Sources; path = ""; sourceTree = "<group>";};
-  A10000292C00000100000001 = {isa = PBXGroup; children = (); name = Resources; path = ""; sourceTree = "<group>";};
+  T001 = {isa = PBXNativeTarget; buildConfigurationList = C001; buildPhases = (P001,P003,P002,P007); buildRules = (); dependencies = (D001); name = DynamicIsland11; productName = DynamicIsland11; productReference = F001; productType = "com.apple.product-type.application";};
+  T002 = {isa = PBXNativeTarget; buildConfigurationList = C002; buildPhases = (P004,P006,P005); buildRules = (); dependencies = (); name = DynamicIslandLiveActivity; productName = DynamicIslandLiveActivity; productReference = F011; productType = "com.apple.product-type.app-extension";};
+  D001 = {isa = PBXTargetDependency; target = T002; targetProxy = X001;};
+  X001 = {isa = PBXContainerItemProxy; containerPortal = PRJ1; proxyType = 1; remoteGlobalIDString = T002; remoteInfo = DynamicIslandLiveActivity;};
 
-  A100000F2C00000100000001 = {isa = PBXGroup; children = (A10000102C00000100000001,A10000272C00000100000001); sourceTree = "<group>";};
-  A10000102C00000100000001 = {isa = PBXGroup; children = (A10000022C00000100000001,A10000042C00000100000001,A10000062C00000100000001,A10000082C00000100000001,A100000A2C00000100000001,A100000C2C00000100000001,A100000E2C00000100000001,A10000122C00000100000001,A10000142C00000100000001); path = DynamicIsland11; sourceTree = "<group>";};
-  A10000112C00000100000001 = {isa = PBXGroup; children = (A10000002C00000100000001,A10000102C00000100000001); name = Products; sourceTree = "<group>";};
+  PRJ1 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; TargetAttributes = {T001 = {CreatedOnToolsVersion = 15.0;}; T002 = {CreatedOnToolsVersion = 15.0;};};}; buildConfigurationList = C003; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base); mainGroup = G004; productRefGroup = G003; projectDirPath = ""; projectRoot = ""; targets = (T001,T002);};
 
-  A10000302C00000100000001 = {isa = PBXNativeTarget; buildConfigurationList = A10000312C00000100000001; buildPhases = (A10000222C00000100000001,A10000202C00000100000001,A10000212C00000100000001,A10000262C00000100000001); buildRules = (); dependencies = (A10000332C00000100000001); name = DynamicIsland11; productName = DynamicIsland11; productReference = A10000002C00000100000001; productType = "com.apple.product-type.application";};
-  A10000342C00000100000001 = {isa = PBXNativeTarget; buildConfigurationList = A10000352C00000100000001; buildPhases = (A10000252C00000100000001,A10000232C00000100000001,A10000242C00000100000001); buildRules = (); dependencies = (); name = DynamicIslandLiveActivity; productName = DynamicIslandLiveActivity; productReference = A10000102C00000100000001; productType = "com.apple.product-type.app-extension";};
+  C001 = {isa = XCConfigurationList; buildConfigurations = (C004,C005); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+  C002 = {isa = XCConfigurationList; buildConfigurations = (C006,C007); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+  C003 = {isa = XCConfigurationList; buildConfigurations = (C008,C009); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
 
-  A10000332C00000100000001 = {isa = PBXTargetDependency; target = A10000342C00000100000001; targetProxy = A10000362C00000100000001;};
-  A10000362C00000100000001 = {isa = PBXContainerItemProxy; containerPortal = A10000162C00000100000001; proxyType = 1; remoteGlobalIDString = A10000342C00000100000001; remoteInfo = DynamicIslandLiveActivity;};
-
-  A10000162C00000100000001 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; TargetAttributes = {A10000302C00000100000001 = {CreatedOnToolsVersion = 15.0;}; A10000342C00000100000001 = {CreatedOnToolsVersion = 15.0;};};}; buildConfigurationList = A10000372C00000100000001; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base); mainGroup = A100000F2C00000100000001; productRefGroup = A10000112C00000100000001; projectDirPath = ""; projectRoot = ""; targets = (A10000302C00000100000001,A10000342C00000100000001);};
-
-  A10000372C00000100000001 = {isa = XCConfigurationList; buildConfigurations = (A10000382C00000100000001,A10000392C00000100000001); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
-  A10000382C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = dwarf; GCC_C_LANGUAGE_STANDARD = gnu11; GCC_NO_COMMON_BLOCKS = YES; GCC_WARN_64_TO_32_BIT_CONVERSION = YES; GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR; IPHONEOS_DEPLOYMENT_TARGET = 16.1; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug;};
-  A10000392C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = gnu11; GCC_NO_COMMON_BLOCKS = YES; GCC_WARN_64_TO_32_BIT_CONVERSION = YES; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; VALIDATE_PRODUCT = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.1;}; name = Release;};
-
-  A100003A2C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIsland11/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/Frameworks"); MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Debug;};
-  A100003B2C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIsland11/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/Frameworks"); MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Release;};
-
-  A100003C2C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIslandLiveActivity/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.1; MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app.liveactivity; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Debug;};
-  A100003D2C00000100000001 = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIslandLiveActivity/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.1; MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app.liveactivity; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Release;};
-
-  A10000312C00000100000001 = {isa = XCConfigurationList; buildConfigurations = (A100003A2C00000100000001,A100003B2C00000100000001); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
-  A10000352C00000100000001 = {isa = XCConfigurationList; buildConfigurations = (A100003C2C00000100000001,A100003D2C00000100000001); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+  C004 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIsland11/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.1; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/Frameworks"); MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Debug;};
+  C005 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIsland11/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.1; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/Frameworks"); MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Release;};
+  C006 = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIslandLiveActivity/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.1; MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app.liveactivity; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Debug;};
+  C007 = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 3; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = DynamicIslandLiveActivity/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.1; MARKETING_VERSION = 3.0; PRODUCT_BUNDLE_IDENTIFIER = com.dynamicisland11.app.liveactivity; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Release;};
+  C008 = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = dwarf; GCC_C_LANGUAGE_STANDARD = gnu11; GCC_NO_COMMON_BLOCKS = YES; GCC_WARN_64_TO_32_BIT_CONVERSION = YES; GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR; IPHONEOS_DEPLOYMENT_TARGET = 16.1; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug;};
+  C009 = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_FILE_STRIP = NO; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = gnu11; GCC_NO_COMMON_BLOCKS = YES; GCC_WARN_64_TO_32_BIT_CONVERSION = YES; GCC_WARN_ABOUT_RETURN_TYPE = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.1; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; VALIDATE_PRODUCT = YES;}; name = Release;};
  };
- rootObject = A10000162C00000100000001;
+ rootObject = PRJ1;
 }
