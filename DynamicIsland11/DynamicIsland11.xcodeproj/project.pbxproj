@@ -30,7 +30,7 @@
   A100000A2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerModel.swift; sourceTree = "<group>";};
   A100000C2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";};
   A100000D2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
-  A100001A2C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>";};
+  A10000312C00000100000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>";};
 
   A100000E2C00000100000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
   A10000232C00000100000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
@@ -41,7 +41,7 @@
   A10000262C00000100000001 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (A100002B2C00000100000001); name = "Embed Foundation Extensions"; runOnlyForDeploymentPostprocessing = 0;};
 
   A100000F2C00000100000001 = {isa = PBXGroup; children = (A10000102C00000100000001,A10000272C00000100000001,A10000112C00000100000001); sourceTree = "<group>";};
-  A10000102C00000100000001 = {isa = PBXGroup; children = (A10000022C00000100000001,A10000042C00000100000001,A10000062C00000100000001,A10000082C00000100000001,A100000A2C00000100000001,A100000C2C00000100000001,A100000D2C00000100000001,A100001D2C00000100000001,A100001A2C00000100000001); path = DynamicIsland11; sourceTree = "<group>";};
+  A10000102C00000100000001 = {isa = PBXGroup; children = (A10000022C00000100000001,A10000042C00000100000001,A10000062C00000100000001,A10000082C00000100000001,A100000A2C00000100000001,A100000C2C00000100000001,A100000D2C00000100000001,A100001D2C00000100000001,A10000312C00000100000001); path = DynamicIsland11; sourceTree = "<group>";};
   A10000272C00000100000001 = {isa = PBXGroup; children = (A100001F2C00000100000001,A100002D2C00000100000001); path = DynamicIslandLiveActivity; sourceTree = "<group>";};
   A10000112C00000100000001 = {isa = PBXGroup; children = (A10000002C00000100000001,A100002C2C00000100000001); name = Products; sourceTree = "<group>";};
 
