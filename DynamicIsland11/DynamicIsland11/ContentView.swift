@@ -17,6 +17,10 @@ struct ContentView: View {
 
                         Divider()
 
+                        Label("Modo simulación listo", systemImage: "checkmark.circle.fill")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.green)
+
                         Text("Esta versión prioriza la compatibilidad de instalación. iOS no permite sustituir las notificaciones de WhatsApp ni crear una isla permanente sobre otros juegos.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
@@ -26,7 +30,7 @@ struct ContentView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
 
                     VStack(alignment: .leading, spacing: 14) {
-                        Text("Estados del sistema")
+                        Text("Estados de Dynamic Island")
                             .font(.headline)
 
                         liveButton("Notificación", icon: "message.fill") {
@@ -40,35 +44,17 @@ struct ContentView: View {
                             if !island.musicPlayer.isSimulatingPlaying {
                                 island.musicPlayer.togglePlayPause()
                             }
-                            liveActivity.start(
-                                kind: "music",
-                                title: "Blinding Lights",
-                                subtitle: "The Weeknd",
-                                symbol: "music.note"
-                            )
                         }
 
                         liveButton("Llamada", icon: "phone.fill") {
                             island.startCallSimulation()
-                            liveActivity.start(
-                                kind: "call",
-                                title: "Ana",
-                                subtitle: "Llamada en curso",
-                                symbol: "phone.fill"
-                            )
                         }
 
                         liveButton("Estado compacto", icon: "capsule") {
                             island.mode = .reduced
-                            liveActivity.start(
-                                kind: "status",
-                                title: "Activo",
-                                subtitle: "Dynamic Island 11",
-                                symbol: "capsule"
-                            )
                         }
 
-                        liveButton("Cerrar Live Activity", icon: "xmark.circle.fill") {
+                        liveButton("Cerrar isla", icon: "xmark.circle.fill") {
                             island.mode = .reduced
                         }
                     }
