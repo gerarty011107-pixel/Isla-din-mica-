@@ -2,7 +2,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var island = IslandModel()
-    @StateObject private var liveActivity = LiveActivityManager()
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -12,22 +11,13 @@ struct ContentView: View {
                         Text("Dynamic Island 11")
                             .font(.title2.bold())
 
-                        Text("Ahora usa Live Activities de Apple para llevar los estados al sistema cuando iOS lo permita.")
+                        Text("Versión 3: experiencia Dynamic Island optimizada para iPhone 11.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
 
                         Divider()
 
-                        Label(
-                            liveActivity.isRunning
-                                ? "Live Activity activa"
-                                : "Lista para activar",
-                            systemImage: liveActivity.isRunning ? "checkmark.circle.fill" : "circle"
-                        )
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(liveActivity.isRunning ? .green : .secondary)
-
-                        Text("En un iPhone sin Dynamic Island física, iOS decide la presentación disponible; la app no puede sustituir la interfaz de WhatsApp ni crear una isla permanente sobre otros juegos.")
+                        Text("Esta versión prioriza la compatibilidad de instalación. iOS no permite sustituir las notificaciones de WhatsApp ni crear una isla permanente sobre otros juegos.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -43,12 +33,6 @@ struct ContentView: View {
                             island.notificationApp = "WhatsApp"
                             island.notificationText = "Hola, te escribí hace un rato."
                             island.triggerNotificationSimulation()
-                            liveActivity.start(
-                                kind: "notification",
-                                title: "WhatsApp",
-                                subtitle: "Hola, te escribí hace un rato.",
-                                symbol: "message.fill"
-                            )
                         }
 
                         liveButton("Música", icon: "music.note") {
@@ -85,7 +69,7 @@ struct ContentView: View {
                         }
 
                         liveButton("Cerrar Live Activity", icon: "xmark.circle.fill") {
-                            liveActivity.end()
+                            island.mode = .reduced
                         }
                     }
                     .padding()
