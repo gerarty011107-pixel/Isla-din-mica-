@@ -1,4 +1,4 @@
-name: iOS Build Check - V3 WidgetKit + Scarlet
+name: iOS Build Check - V4 WidgetKit + Scarlet
 
 on:
   push:
@@ -33,6 +33,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
+            CODE_SIGN_INJECT_BASE_ENTITLEMENTS=NO \
             build | tee xcodebuild.log
 
       - name: Verify app and Live Activity extension
@@ -44,6 +45,8 @@ jobs:
           test -d "$EXT_PATH"
           test -f "$APP_PATH/Info.plist"
           test -f "$EXT_PATH/Info.plist"
+          test ! -e "$APP_PATH/embedded.mobileprovision"
+          test ! -e "$EXT_PATH/embedded.mobileprovision"
 
           echo "App:"
           /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Info.plist"
@@ -53,18 +56,18 @@ jobs:
       - name: Package unsigned IPA for Scarlet
         run: |
           APP_PATH="$PWD/build/Build/Products/Release-iphoneos/DynamicIsland11.app"
-          rm -rf Payload DynamicIsland11-v3-unsigned.ipa
+          rm -rf Payload DynamicIsland11-v4-unsigned.ipa
           mkdir -p Payload
           cp -R "$APP_PATH" Payload/DynamicIsland11.app
-          /usr/bin/zip -qry DynamicIsland11-v3-unsigned.ipa Payload
-          unzip -l DynamicIsland11-v3-unsigned.ipa | grep -E 'DynamicIsland11.app/PlugIns/DynamicIslandLiveActivity.appex|DynamicIsland11.app/Info.plist'
-          test -s DynamicIsland11-v3-unsigned.ipa
+          /usr/bin/zip -qry DynamicIsland11-v4-unsigned.ipa Payload
+          unzip -l DynamicIsland11-v4-unsigned.ipa | grep -E 'DynamicIsland11.app/PlugIns/DynamicIslandLiveActivity.appex|DynamicIsland11.app/Info.plist'
+          test -s DynamicIsland11-v4-unsigned.ipa
 
-      - name: Upload V3 unsigned IPA
+      - name: Upload V4 unsigned IPA
         uses: actions/upload-artifact@v6
         with:
-          name: DynamicIsland11-v3-unsigned-ipa
-          path: DynamicIsland11-v3-unsigned.ipa
+          name: DynamicIsland11-v4-unsigned-ipa
+          path: DynamicIsland11-v4-unsigned.ipa
           if-no-files-found: error
 
       - name: Upload build log
