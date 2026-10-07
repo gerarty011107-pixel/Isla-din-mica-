@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var island = IslandModel()
+    @StateObject private var liveActivity = LiveActivityManager()
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -11,17 +12,20 @@ struct ContentView: View {
                         Text("Dynamic Island 11")
                             .font(.title2.bold())
 
-                        Text("Versión 3: experiencia Dynamic Island optimizada para iPhone 11.")
+                        Text("Versión 3: simulación + Live Activity con WidgetKit.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
 
                         Divider()
 
-                        Label("Modo simulación listo", systemImage: "checkmark.circle.fill")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.green)
+                        Label(
+                            liveActivity.isRunning ? "Live Activity activa" : "Modo simulación listo",
+                            systemImage: liveActivity.isRunning ? "capsule.fill" : "checkmark.circle.fill"
+                        )
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(liveActivity.isRunning ? .green : .green)
 
-                        Text("Esta versión prioriza la compatibilidad de instalación. iOS no permite sustituir las notificaciones de WhatsApp ni crear una isla permanente sobre otros juegos.")
+                        Text("La app usa las APIs públicas de ActivityKit y WidgetKit. iOS sigue controlando la presentación del sistema; no sustituye las notificaciones de WhatsApp ni crea una isla permanente sobre otras apps.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -33,10 +37,16 @@ struct ContentView: View {
                         Text("Estados de Dynamic Island")
                             .font(.headline)
 
-                        liveButton("Notificación", icon: "message.fill") {
+                        liveButton("WhatsApp (prueba)", icon: "message.fill") {
                             island.notificationApp = "WhatsApp"
                             island.notificationText = "Hola, te escribí hace un rato."
                             island.triggerNotificationSimulation()
+                            liveActivity.start(
+                                kind: "whatsapp",
+                                title: "WhatsApp",
+                                subtitle: "Hola, te escribí hace un rato.",
+                                symbol: "message.fill"
+                            )
                         }
 
                         liveButton("Música", icon: "music.note") {
@@ -44,18 +54,37 @@ struct ContentView: View {
                             if !island.musicPlayer.isSimulatingPlaying {
                                 island.musicPlayer.togglePlayPause()
                             }
+                            liveActivity.start(
+                                kind: "music",
+                                title: island.songTitle,
+                                subtitle: island.artistName,
+                                symbol: "music.note"
+                            )
                         }
 
                         liveButton("Llamada", icon: "phone.fill") {
                             island.startCallSimulation()
+                            liveActivity.start(
+                                kind: "call",
+                                title: island.callContact,
+                                subtitle: island.callDuration,
+                                symbol: "phone.fill"
+                            )
                         }
 
                         liveButton("Estado compacto", icon: "capsule") {
                             island.mode = .reduced
+                            liveActivity.start(
+                                kind: "status",
+                                title: "Dynamic Island",
+                                subtitle: "Estado activo",
+                                symbol: "circle.fill"
+                            )
                         }
 
                         liveButton("Cerrar isla", icon: "xmark.circle.fill") {
                             island.mode = .reduced
+                            liveActivity.end()
                         }
                     }
                     .padding()
