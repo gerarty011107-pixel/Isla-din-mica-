@@ -47,7 +47,7 @@ jobs:
           mkdir -p Payload
           cp -R "$APP_PATH" Payload/DynamicIsland11.app
           /usr/bin/zip -qry DynamicIsland11-v3-unsigned.ipa Payload
-          test -s DynamicIsland11-unsigned.ipa
+          test -s DynamicIsland11-v3-unsigned.ipa
 
       - name: Upload unsigned IPA
         uses: actions/upload-artifact@v6
